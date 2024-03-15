@@ -12,7 +12,7 @@ wget https://bitbucket.org/!api/2.0/snippets/compuquipteam/Edg9kA/afbfbb235c3fdb
 wget $NESSUS_EXPORT -O "export.nessus" > /dev/null 2>&1
 
 # Run the Perl parser script
-perl parse_nessus.xml.pl -f export.nessus > /dev/null 2>&1
+perl ./parse_nessus_xml.pl -f export.nessus > /dev/null 2>&1
 
 # Find the XLSX outputm encode it as B64, then store in the $OUTPUT env var
 OUTFILE=$(find . -name "nessus_report*")
