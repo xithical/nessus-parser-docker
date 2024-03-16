@@ -16,7 +16,7 @@ perl ./parse_nessus_xml.pl -f export.nessus > /dev/null 2>&1
 
 # Find the XLSX outputm encode it as B64, then store in the $OUTPUT env var
 OUTFILE=$(find . -name "nessus_report*")
-OUTPUT=$(cat $OUTFILE | base64)
+OUTPUT=$(cat $OUTFILE | base64 -w 0)
 
 # Echo the resulting output in JSON format
 echo "$OUTPUT"
