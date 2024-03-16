@@ -19,4 +19,5 @@ OUTFILE=$(find . -name "nessus_report*")
 OUTPUT=$(echo -n `cat $OUTFILE` | base64)
 
 # Echo the resulting output in JSON format
-echo "{\"output\":\"$OUTPUT\"}"
+echo "$OUTPUT"
+exit 0
