@@ -1,5 +1,6 @@
 FROM alpine:latest
 COPY entrypoint.sh /entrypoint.sh
+COPY parse_nessus_xml.pl /parse_nessus_xml.pl
 RUN apk update \
     && apk add make unzip \
     && apk add perl perl-utils perl-app-cpanminus perl-xml-treepp perl-math-round perl-archive-zip \
