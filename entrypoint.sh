@@ -5,9 +5,6 @@
  automation platforms.
 head
 
-# Download Nessus parser script
-wget https://bitbucket.org/!api/2.0/snippets/compuquipteam/Edg9kA/afbfbb235c3fdbfb9950c1d4649545e7990bd659/files/parse_nessus_xml.pl > /dev/null 2>&1
-
 # Get Nessus export from environment variable URL
 wget $NESSUS_EXPORT -O "export.nessus" > /dev/null 2>&1
 
